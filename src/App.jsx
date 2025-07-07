@@ -21,14 +21,16 @@ function App() {
       title: "Finish frontend test",
       description: "Implement all features using Chakra UI and Tailwind",
       status: "In Progress",
-      date: "2025-07-05",
+      createdAt: "2025-07-05T10:00:00Z",
+
     },
     {
       id: 2,
       title: "Review PRs",
       description: "Check pending pull requests and leave comments",
       status: "Pending",
-      date: "2025-07-04",
+       createdAt: "2025-07-05T10:00:00Z",
+
     },
   ]);
 
@@ -36,9 +38,13 @@ function App() {
   const [search, setSearch] = useState("");
   const [statusFilter, setStatusFilter] = useState("");
 
-  const handleAddTask = (newTask) => {
-    setTasks([...tasks, { ...newTask, id: Date.now() }]);
+    const handleAddTask = (newTask) => {
+    setTasks([
+      ...tasks,
+      { ...newTask, id: Date.now(), createdAt: new Date().toISOString() },
+    ]);
   };
+
 
   const handleSaveTask = (updatedTask) => {
     setTasks(tasks.map((t) => (t.id === updatedTask.id ? updatedTask : t)));

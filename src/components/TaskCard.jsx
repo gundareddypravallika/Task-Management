@@ -28,8 +28,11 @@ function TaskCard({ task, onClick }) {
         </Text>
         <Badge colorScheme={getStatusColor(task.status)}>{task.status}</Badge>
         <Text fontSize="xs" color="gray.500">
-          Created: {new Date(task.createdAt).toLocaleDateString()}
-        </Text>
+  Created:{" "}
+  {task.createdAt
+    ? new Date(task.createdAt).toLocaleDateString()
+    : "N/A"}
+</Text>
       </CardBody>
     </Card>
   );
