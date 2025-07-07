@@ -1,5 +1,4 @@
-Technical Test – Frontend Developer (React.js, Chakra UI & Tailwind CSS)
-Company: Coally
+##  Task Management App  ##
 
 1. Objective
 Evaluate your skills in building React.js interfaces, managing state with hooks, applying
@@ -7,24 +6,43 @@ Chakra UI components, and leveraging Tailwind CSS for rapid styling—while foll
 practices for project structure, accessibility, and responsive design.
 
 2. Technical Requirements
-● Framework: React.js (v17 or later)
-● Styling Libraries:
-○ Chakra UI (base components, theming)
-○ Tailwind CSS (utility classes for custom styles)
-● State Management: React Hooks (useState, useEffect, useContext, etc.)
-● Routing (optional): React Router
+● React.js | JavaScript library for building UI 
+● Chakra UI | Component library for styling 
+● Tailwind CSS | Utility-first CSS framework 
+● React Hooks | Used for state and effect handling 
+● Vite | Next-generation frontend tooling 
 ● Version Control: Git (public repository on GitHub or similar)
 
-3. General Instructions
-1. Initialize a brand-new Git repository for this test.
-2. Create a branch named feature/coally-test for your work.
-3. When you’re done, push your branch to your public GitHub (or similar) account and
-share the link.
-4. Include a brief README explaining:
+3. Features:
+1. Add new tasks with title, description, and status
+2. Edit or delete existing tasks
+3. Filter tasks based on status (To Do, In Progress, Completed)
+4. Fully responsive design for desktop and mobile
+5. Built using Vite for fast development
+
+
 ○ How to install and run the app.
+- Node.js (v18 or above)
+- npm (comes with Node.js)
+- Git (optional, if cloning via terminal)
+  
 ○ Your architecture and design decisions.
+--- Component-Based Design:
+The application uses React components to separate concerns — each feature (TaskCard, AddTaskModal, etc.) is self-contained for reusability and easier maintenance.
+--- Hooks for State Management:
+React's useState hook is used to manage tasks in memory. State is lifted to the parent (App.jsx) so components can communicate through props.
+--- Modal-Based Forms:
+Chakra UI modals are used to add and edit tasks, improving UX by not navigating away from the main view.
+--- Tailwind + Chakra UI:
+Chakra provides accessibility and pre-styled components. Tailwind is used for utility-based customization and fine-tuned layout/styling control.
+--- Vite:
+Used instead of Create React App for faster dev experience and modern tooling.
 
 ○ Any further improvements you’d implement if you had more time.
+-- Add due dates or reminders
+--> Implement drag-and-drop task ordering
+--> Add user authentication
+
 
 4. Exercise Description
 Build a simple “Task Management” application with the following features:
@@ -61,38 +79,5 @@ spacing and color accents.
 (with margin).
 ● Use Tailwind breakpoints (sm:, md:, lg:) to adjust sizes and spacing.
 
-5. Submission
-● Git repository with all commits.
-● A clear README.md.
-● Link to the pull request or a ZIP of your project.
-● Please send your submission to: danielgomez@coally.com
 
-6. Evaluation Criteria
-Aspect Weigh
-t
 
-Description
-
-Functionality 40 % Listing, filtering, modals, and creation features work as
-
-specified.
-
-Code & Structure 20 % Clean folder structure and reusable components.
-Chakra UI Usage 15 % Proper use of components, theming, and accessibility.
-Tailwind CSS
-Usage
-
-10 % Effective utility classes for responsive/custom styles.
-
-Responsive
-Design
-
-10 % Smooth adaptation across devices.
-
-Documentation 5 % Clear setup instructions and design notes.
-
-7. Optional Bonuses
-● Persist tasks in localStorage so data survives page reloads.
-● Add sorting by creation date or alphabetically.
-● Implement a dark mode toggle using Chakra UI theming.
-● Set up separate routes (e.g. / for list, /tasks/:id for detail).
